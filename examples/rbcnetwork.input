@@ -1,0 +1,33 @@
+[Grid]
+File = ./grids/honeycomb.dgf
+
+[RBCModel]
+NumBufferCells = 2000
+InitTubeHematocrit = 0.2
+MeanInflowTubeHematocrit = 0.2
+
+[TimeLoop]
+DtInitial = 1e-3
+TEnd = 4
+
+[Problem]
+Name = capillaries
+EnableGravity = false
+EnableVtkOutput = true
+
+[Component]
+LiquidKinematicViscosity = 1.3e-6 # [m^2/s]
+LiquidDensity = 1030 # [kg/m^3]
+
+[BoundaryConditions1D]
+PressureInput = 103500
+DeltaPressure = 1000
+
+[LinearSolver]
+MaxIterations = 20000
+
+[Vtk]
+AddProcessRank = false
+
+[Assembly.NumericDifference]
+BaseEpsilon = 1

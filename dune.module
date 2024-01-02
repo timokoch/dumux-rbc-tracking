@@ -1,0 +1,12 @@
+################################
+# Dune module information file #
+################################
+
+# Name of the module
+Module: dumux-rbc-tracking
+Version: 0.1
+Maintainer: timokoch@uio.no
+# Required build dependencies
+Depends: dumux dune-foamgrid
+# Optional build dependencies
+#Suggests:
